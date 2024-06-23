@@ -15,7 +15,7 @@ const PaymentService = {
 
   savePayment: async (data) => {
     return new Promise(async (resolve, reject) => {
-      const isNew = await PaymentModel.findOne({ telegramId: data.telegramId })
+      const isNew = await PaymentModel.findOne({ memo: data.memo })
 
       if (!isNew) {
         const newPayment = new PaymentModel({

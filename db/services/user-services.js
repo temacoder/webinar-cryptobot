@@ -29,7 +29,7 @@ const UserService = {
         await newUser.save()
         resolve(true)
       } else {
-        reject(false)
+        resolve(false)
       }
     })
   }
